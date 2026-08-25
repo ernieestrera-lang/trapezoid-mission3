@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission 3 Questions - Community Garden Challenge</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f3faf6;color:#24332b}
+.wrap{max-width:920px;margin:auto;padding:20px}
+.hero,.step,.final{background:#fff;border-radius:18px;padding:22px;margin-bottom:18px;box-shadow:0 8px 22px #00000012}
+.hero{background:linear-gradient(135deg,#176b3a,#0e4827);color:#fff}
+.badge{display:inline-block;background:#fff;color:#176b3a;padding:7px 12px;border-radius:20px;font-weight:bold}
+h1{margin:10px 0}.step{border-left:7px solid #2f6fb2}.violet{border-left-color:#6f42a8}.orange{border-left-color:#d97922}.green{border-left-color:#176b3a}
+.choice{display:block;width:100%;text-align:left;margin:9px 0;padding:12px;border:2px solid #d8e3dc;border-radius:10px;background:white;font-size:16px;cursor:pointer}
+.choice.ok{background:#e8f7ee;border-color:#187a45}.choice.no{background:#fdeceb;border-color:#b3261e}
+.feedback{display:none;padding:11px;margin-top:10px;border-radius:10px}.good{display:block;background:#e8f7ee}.bad{display:block;background:#fdeceb}
+.next{display:none;background:#b72c5d;color:#fff;border:0;border-radius:10px;padding:11px 16px;font-weight:bold;margin-top:10px;cursor:pointer}
+.hidden{display:none}.formula{text-align:center;background:#eef8f1;padding:14px;border-radius:10px;font-size:19px;font-weight:bold}
+.final{text-align:center;border:2px solid #acd1b7}.reset{background:#176b3a;color:white;border:0;padding:11px 16px;border-radius:10px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<span class="badge">TRAPEZOID MODULE • MISSION 3</span>
+<h1>The Community Garden Challenge!</h1>
+<p>Study the Mission 3 situation card, then answer the questions using <b>Polya’s Four-Step Problem-Solving Process</b>.</p>
+</div>
+
+<div class="step" id="s1">
+<h2>🔵 Step 1: Understand the Problem</h2>
+<p><b>What are the given measurements in the problem?</b></p>
+<div data-q="1">
+<button class="choice" data-ok="1">A. Shorter base = 14 m and midsegment = 20 m</button>
+<button class="choice">B. Shorter base = 20 m and midsegment = 14 m</button>
+<button class="choice">C. Longer base = 14 m and midsegment = 20 m</button>
+<button class="choice">D. Height = 14 m and midsegment = 20 m</button>
+</div>
+<div class="feedback" id="f1"></div>
+<button class="next" id="n1">Continue →</button>
+</div>
+
+<div class="step hidden" id="s1b">
+<h2>🔵 Step 1: Understand the Problem</h2>
+<p><b>What are you asked to find?</b></p>
+<div data-q="2">
+<button class="choice">A. The height of the trapezoid</button>
+<button class="choice">B. The area of the garden</button>
+<button class="choice" data-ok="1">C. The length of the longer base</button>
+<button class="choice">D. The length of each leg</button>
+</div>
+<div class="feedback" id="f2"></div>
+<button class="next" id="n2">Continue to Step 2 →</button>
+</div>
+
+<div class="step violet hidden" id="s2">
+<h2>🟣 Step 2: Devise a Plan</h2>
+<p><b>Which formula can be used to find the missing base?</b></p>
+<div data-q="3">
+<button class="choice">A. M = b₁ + b₂</button>
+<button class="choice" data-ok="1">B. M = (b₁ + b₂) / 2</button>
+<button class="choice">C. M = b₁ − b₂</button>
+<button class="choice">D. M = b₁ × b₂</button>
+</div>
+<div class="feedback" id="f3"></div>
+<button class="next" id="n3">Continue →</button>
+</div>
+
+<div class="step violet hidden" id="s2b">
+<h2>🟣 Step 2: Devise a Plan</h2>
+<p><b>Which equation correctly represents the situation?</b></p>
+<div data-q="4">
+<button class="choice">A. 14 = (20 + b₂) / 2</button>
+<button class="choice" data-ok="1">B. 20 = (14 + b₂) / 2</button>
+<button class="choice">C. 20 = 14 + b₂</button>
+<button class="choice">D. 20 = 14b₂ / 2</button>
+</div>
+<div class="feedback" id="f4"></div>
+<button class="next" id="n4">Continue to Step 3 →</button>
+</div>
+
+<div class="step orange hidden" id="s3">
+<h2>🟠 Step 3: Carry Out the Plan</h2>
+<div class="formula">20 = (14 + b₂) / 2</div>
+<p><b>What is the length of the longer base?</b></p>
+<div data-q="5">
+<button class="choice">A. 20 m</button>
+<button class="choice">B. 24 m</button>
+<button class="choice" data-ok="1">C. 26 m</button>
+<button class="choice">D. 34 m</button>
+</div>
+<div class="feedback" id="f5"></div>
+<button class="next" id="n5">Continue to Step 4 →</button>
+</div>
+
+<div class="step green hidden" id="s4">
+<h2>🟢 Step 4: Look Back</h2>
+<p><b>How can you check whether 26 meters is the correct longer base?</b></p>
+<div data-q="6">
+<button class="choice">A. Add 14 and 26 and check if the sum is 20.</button>
+<button class="choice" data-ok="1">B. Find half the sum of 14 and 26 and check if it equals 20.</button>
+<button class="choice">C. Subtract 14 from 26 and check if the difference is 20.</button>
+<button class="choice">D. Multiply 14 and 26 and check if the product is 20.</button>
+</div>
+<div class="feedback" id="f6"></div>
+<button class="next" id="n6">Check the Answer ✓</button>
+</div>
+
+<div class="final hidden" id="final">
+<h2>🎉 Mission Complete!</h2>
+<p><b>Longer base = 26 meters</b></p>
+<div class="formula">M = (14 + 26) / 2 = 40 / 2 = 20 m</div>
+<p>The result matches the given midsegment, so <b>26 meters</b> is correct.</p>
+<button class="reset" onclick="location.reload()">Try Again</button>
+</div>
+</div>
+
+<script>
+const msg={
+1:["Correct! The shorter base is 14 meters and the midsegment is 20 meters.","Try again. Review the two measurements shown on the situation card."],
+2:["Correct! The problem asks for the length of the longer base.","Try again. Focus on the question at the end of the situation."],
+3:["Correct! The trapezoid midsegment equals half the sum of the two bases.","Try again. Recall the trapezoid midsegment formula."],
+4:["Correct! Substitute M = 20 and b₁ = 14: 20 = (14 + b₂) / 2.","Try again. Use 20 for the midsegment and 14 for the known base."],
+5:["Correct! 40 = 14 + b₂, so b₂ = 26 meters.","Try again. Multiply both sides by 2, then subtract 14."],
+6:["Correct! Half of 14 + 26 is 20, matching the given midsegment.","Try again. Check using the trapezoid midsegment formula."]
+};
+document.querySelectorAll("[data-q]").forEach(g=>{
+  const q=g.dataset.q,f=document.getElementById("f"+q),n=document.getElementById("n"+q);
+  g.querySelectorAll(".choice").forEach(b=>{
+    b.onclick=()=>{
+      g.querySelectorAll(".choice").forEach(x=>x.classList.remove("ok","no"));
+      if(b.dataset.ok){
+        b.classList.add("ok");
+        f.className="feedback good";
+        f.textContent="✅ "+msg[q][0];
+        n.style.display="inline-block";
+        g.querySelectorAll(".choice").forEach(x=>x.disabled=true);
+      }else{
+        b.classList.add("no");
+        f.className="feedback bad";
+        f.textContent="❌ "+msg[q][1];
+      }
+    };
+  });
+});
+[["n1","s1b"],["n2","s2"],["n3","s2b"],["n4","s3"],["n5","s4"],["n6","final"]].forEach(([b,t])=>{
+  document.getElementById(b).onclick=()=>{
+    const e=document.getElementById(t);
+    e.classList.remove("hidden");
+    e.scrollIntoView({behavior:"smooth",block:"start"});
+  };
+});
+</script>
+</body>
+</html>
